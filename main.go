@@ -34,15 +34,15 @@ func main() {
 	}
 
 	baseUrlTshirt := "https://www.championstore.com/en_gb/men/clothing/t-shirts?p="
-  maxPagesTshirt := 5  
+	maxPagesTshirt := 5
 
-  for page := 1; page <= maxPagesTshirt; page++ {
-    url := baseUrlTshirt + strconv.Itoa(page)
-    err := scraper.ScrapeItems("t-shirt",url, writer)
-    if err != nil {
-      fmt.Println("Error scraping t-shirts:", err)
-    }
-  }
+	for page := 1; page <= maxPagesTshirt; page++ {
+		url := baseUrlTshirt + strconv.Itoa(page)
+		err := scraper.ScrapeItems("t-shirt", url, writer)
+		if err != nil {
+			fmt.Println("Error scraping t-shirts:", err)
+		}
+	}
 
 	fmt.Println("Data saved to file:", "data.csv")
 }
