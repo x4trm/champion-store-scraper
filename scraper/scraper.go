@@ -9,7 +9,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-func ScrapeItems(item string, url string, writer *csv.Writer) error {
+func ScrapeItems(item string, sex string, url string, writer *csv.Writer) error {
 	resp, err := http.Get(url)
 	if err != nil {
 		return fmt.Errorf("Error while loading page: %w", err)
@@ -27,7 +27,10 @@ func ScrapeItems(item string, url string, writer *csv.Writer) error {
 		name := strings.TrimSpace(s.Find(".product-item-name a").Text())
 		price := strings.TrimSpace(s.Find(".normal-price .price-wrapper").Text())
 
-		data := []string{item, collection, name, price}
+		productLink, _ := s.Find(".product-item-name a").Attr("href")
+		imageLink, _ := s.Find(".product-item-photo img").Attr("src")
+
+		data := []string{item, collection, name, sex, price, productLink, imageLink}
 		if err := writeCSV(data, writer); err != nil {
 			fmt.Println("Error while writing to CSV:", err)
 		}

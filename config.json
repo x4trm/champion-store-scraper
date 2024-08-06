@@ -1,0 +1,40 @@
+{
+  "entries": [
+    {
+      "item": "Hoodie",
+      "baseUrl": "https://www.championstore.com/en_gb/men/clothing/hoodies?p=",
+      "maxPages": 3,
+      "sex": "men"
+    },
+    {
+      "item": "T-shirt",
+      "baseUrl": "https://www.championstore.com/en_gb/men/clothing/t-shirts?p=",
+      "maxPages": 5,
+      "sex": "men"
+    },
+    {
+      "item": "Hoodie",
+      "baseUrl": "https://www.championstore.com/en_gb/men/clothing/hoodies?p=",
+      "maxPages": 2,
+      "sex": "women"
+    },
+    {
+      "item": "T-shirt",
+      "baseUrl": "https://www.championstore.com/en_gb/women/clothing/t-shirts?p=",
+      "maxPages": 4,
+      "sex": "women"
+    },
+    {
+      "item": "Leggins",
+      "baseUrl": "https://www.championstore.com/en_gb/women/clothing/leggings",
+      "maxPages": 1,
+      "sex": "women"
+    },
+    {
+      "item": "T-shirt",
+      "baseUrl": "https://www.championstore.com/en_gb/kids/boys/boys-t-shirts?p=",
+      "maxPages": 2,
+      "sex": "kids"
+    }
+  ]
+}
