@@ -32,7 +32,7 @@ func main() {
 	writer := csv.NewWriter(file)
 	defer writer.Flush()
 
-	_ = writer.Write([]string{"Item", "Collection", "Name", "Sex", "Price", "Product Link", "Image Link"})
+	_ = writer.Write([]string{"Item", "Collection", "Name", "Sex", "Price", "Product Link"})
 
 	for _, entry := range cfg.Entries {
 		for page := 1; page <= entry.MaxPages; page++ {

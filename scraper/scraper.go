@@ -28,9 +28,8 @@ func ScrapeItems(item string, sex string, url string, writer *csv.Writer) error 
 		price := strings.TrimSpace(s.Find(".normal-price .price-wrapper").Text())
 
 		productLink, _ := s.Find(".product-item-name a").Attr("href")
-		imageLink, _ := s.Find(".product-item-photo img").Attr("src")
 
-		data := []string{item, collection, name, sex, price, productLink, imageLink}
+		data := []string{item, collection, name, sex, price, productLink}
 		if err := writeCSV(data, writer); err != nil {
 			fmt.Println("Error while writing to CSV:", err)
 		}
