@@ -19,7 +19,7 @@ This program scrapes example items from Champion Store website. It extracts info
 1. Clone the repository
 
 ```bash
-$ git clone https://github.com/yourusername/champion-store-scraper.git
+$ git clone https://github.com/x4trm/champion-store-scraper.git
 $ cd champion-store-scraper
 ```
 
